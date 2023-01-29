@@ -1,0 +1,143 @@
+
+
+:root {
+    --bg-image: url("./assets/mobile-darkmode.jpg");
+    --text-color: rgb(255, 255, 255);
+    --stroke-color: rgba(255, 255, 255, 0.50);
+    --surface-color: rgba(255, 255, 255, 0.11);
+    --highlight-color: rgba(255,255,255, 0.5);
+    --highlight-color-social: rgba(255,255,255, 0.20);
+    --bg-button: url("./assets/moon.svg");
+}
+
+.light {
+    --bg-image: url("./assets/mobile-lightmode.jpg");;
+    --text-color: rgb(0, 0, 0);
+    --stroke-color: rgba(0, 0, 0, 0.20);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --highlight-color: rgba(0, 0, 0, 0.2);
+    --highlight-color-social: rgba(0,0,0, 0.10);
+    --bg-button: url("./assets/sun.svg");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+body {
+    background:  var(--bg-image) top center no-repeat;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+
+}
+
+#container {
+    max-width: 360px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+#container #profile {
+    margin-bottom: 32px;
+}
+
+#container #profile img {
+    max-width: 112px;
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: auto;
+}
+
+#container #switch button {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: none;
+    background: white var(--bg-button) no-repeat center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.light #container #switch button {
+    right: 0;
+    left: initial;
+}
+
+#container #switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+
+#container #links li {
+    width: 312px;
+    margin: 16px auto;
+    padding: 16px;
+    border:1px solid var(--stroke-color);
+    border-radius: 8px;
+    background-color: var(--surface-color);
+    backdrop-filter: blur(8px);
+    transition: background 0.3s;
+}
+
+#container #links li a{
+    font-weight: bold;
+}
+
+#container #links li:hover{
+    background-color: var(--highlight-color-social);
+
+}
+
+
+#container #social {
+    display: flex;
+    justify-content: center;
+
+    padding: 24px 0;
+}
+
+#container #social a{
+    font-size: 24px;
+
+
+    transition: background 0.3s;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+#container #social a:hover {
+    background: var(--highlight-color-social);
+
+}
+
+footer {
+    padding: 24px auto;
+}
+
+footer p {
+    font-size: 14px;
+    font-weight: normal;
+}
