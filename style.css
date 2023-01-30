@@ -34,6 +34,7 @@ body {
     background:  var(--bg-image) top center no-repeat;
     background-size: cover;
     font-family: 'Inter', sans-serif;
+    height: 100vh;
 
 }
 
@@ -71,11 +72,15 @@ body {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    animation: slide-out 0.4s;
+}
+
+#container #switch button:hover {
+    outline: 8px solid var(--highlight-color);
 }
 
 .light #container #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
 }
 
 #container #switch span {
@@ -90,7 +95,7 @@ body {
 
 
 #container #links li {
-    width: 312px;
+    width: 100%;
     margin: 16px auto;
     padding: 16px;
     border:1px solid var(--stroke-color);
@@ -141,4 +146,34 @@ footer {
 footer p {
     font-size: 14px;
     font-weight: normal;
+}
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+
+    to{
+        left: 0;
+    }
+}
+
+@media  (max-width: 768px) {
+    :root {
+       --bg-image: url("./assets/bg-desktop.jpg");
+    }
+
+    .light {
+        --bg-image: url("./assets//bg-desktop-light.jpg");
+    }
 }
