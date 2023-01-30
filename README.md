@@ -13,7 +13,7 @@ Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolog
 </p>
 
 <p align="center">
-  <img alt="License" src="https://www.figma.com/file/jP6ZrOJ2XddYzZeVVN7lrP/DevLinks-(Community)?node-id=90%3A160&t=Rfd2zum15UqRiUe4-4">
+  <img alt="License" src="https://raw.githubusercontent.com/w3sleygessner/devlinks/main/.github/capa.jpg">
 </p>
 
 <br>
