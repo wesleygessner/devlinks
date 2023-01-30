@@ -38,7 +38,8 @@ body {
 }
 
 #container {
-    max-width: 360px;
+    width: 100%;
+    max-width: 588px;
     margin: auto;
     padding: 24px;
     text-align: center;
